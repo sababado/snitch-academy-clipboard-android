@@ -12,6 +12,11 @@ repositories {
     mavenCentral()
 }
 
+def versionMajor = 1
+def versionMinor = 0
+def versionPatch = 0
+def versionBuild = 0 // bump for dogfood builds, public betas, etc.
+
 android {
     compileSdkVersion 18
     buildToolsVersion "18.1.1"
@@ -19,6 +24,30 @@ android {
     defaultConfig {
         minSdkVersion 15
         targetSdkVersion 18
+        versionCode versionMajor * 10000 + versionMinor * 1000 + versionPatch * 100 + versionBuild
+        versionName "${versionMajor}.${versionMinor}.${versionPatch}"
+    }
+
+    signingConfigs {
+        release {
+            storeFile file("../keystore/.keystore")
+            storePassword "midatlantic"
+            keyAlias "snitch-academy-clipboard"
+            keyPassword "midatlantic"
+        }
+    }
+
+    buildTypes {
+        release {
+            signingConfig signingConfigs.release
+        }
+
+        beta.initWith(buildTypes.release)
+        beta {
+            versionNameSuffix = ".${versionBuild}.beta"
+            debuggable true
+        }
+        prod.initWith(buildTypes.release)
     }
 }
 
