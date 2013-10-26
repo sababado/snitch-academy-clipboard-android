@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">SnitchAcademy</string>
+    <string name="title_participant_detail">Participant Detail</string>
+
+    <string name="pokerface">Pokerface</string>
+    <string name="arena">Arena</string>
+    <string name="endurance_arena">Endurance Arena</string>
+    <string name="no_contact">No Contact</string>
+    <string name="blockade">Blockade</string>
+    <string name="chase_plus">Chase Pluse</string>
+</resources>
