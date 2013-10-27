@@ -7,7 +7,6 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-import com.sababado.snitchacademy.ins.dummy.DummyContent;
 import com.sababado.snitchacademy.ins.model.Participant;
 
 import java.util.ArrayList;
