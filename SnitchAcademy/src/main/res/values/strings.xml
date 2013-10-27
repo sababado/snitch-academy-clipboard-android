@@ -10,4 +10,6 @@
     <string name="no_contact">No Contact</string>
     <string name="blockade">Blockade</string>
     <string name="chase_plus">Chase Pluse</string>
+
+    <string name="enter_name">Please enter a name or cancel.</string>
 </resources>

@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.inputmethod.EditorInfo;
 import android.widget.TextView;
+import android.widget.Toast;
 
 /**
  * Created by rszabo on 10/25/13.
@@ -49,7 +50,13 @@ public class AddParticipantDialogFragment extends DialogFragment {
         }
     };
     private void saveName() {
-        final String name = (mNameField).getText().toString();
+        final String name = (mNameField).getText().toString().trim();
+        if(name.isEmpty()) {
+            Toast.makeText(getActivity(), R.string.enter_name, Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        //else name is good.
         ((ParticipantListActivity)getActivity()).addParticipant(name);
         dismiss();
     }
