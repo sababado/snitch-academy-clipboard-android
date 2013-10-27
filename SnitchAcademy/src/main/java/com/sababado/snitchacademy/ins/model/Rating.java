@@ -10,19 +10,19 @@ import java.util.ArrayList;
  */
 public class Rating implements Parcelable{
     private String key;
-    private int rating;
+    private float rating;
 
     public Rating(){
     }
 
-    public Rating(String key, int rating) {
+    public Rating(String key, float rating) {
         this.rating = rating;
         this.key = key;
     }
 
     public Rating(final Parcel in) {
         key = in.readString();
-        rating = in.readInt();
+        rating = in.readFloat();
     }
 
     public String getKey() {
@@ -33,11 +33,11 @@ public class Rating implements Parcelable{
         this.key = key;
     }
 
-    public int getRating() {
+    public float getRating() {
         return rating;
     }
 
-    public void setRating(int rating) {
+    public void setRating(float rating) {
         this.rating = rating;
     }
 
@@ -61,7 +61,7 @@ public class Rating implements Parcelable{
     @Override
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeString(key);
-        dest.writeInt(rating);
+        dest.writeFloat(rating);
     }
 
     @Override
@@ -80,7 +80,7 @@ public class Rating implements Parcelable{
     @Override
     public int hashCode() {
         int result = key != null ? key.hashCode() : 0;
-        result = 31 * result + rating;
+        result = 31 * result + (rating != +0.0f ? Float.floatToIntBits(rating) : 0);
         return result;
     }
 

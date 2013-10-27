@@ -148,13 +148,13 @@ public class ParticipantDetailFragment extends Fragment {
         private void putRating(DrillRating drillRating, final int ratingBarId, final float rating) {
             switch (ratingBarId) {
                 case R.id.first_run:
-                    drillRating.putRating(KEY_FIRST_RUN, (int) (rating + 0.5f));
+                    drillRating.putRating(KEY_FIRST_RUN, rating);
                     break;
                 case R.id.second_run:
-                    drillRating.putRating(KEY_SECOND_RUN, (int) (rating + 0.5f));
+                    drillRating.putRating(KEY_SECOND_RUN, rating);
                     break;
                 case R.id.third_run:
-                    drillRating.putRating(KEY_THIRD_RUN, (int) (rating + 0.5f));
+                    drillRating.putRating(KEY_THIRD_RUN, rating);
                     break;
             }
         }

@@ -46,7 +46,7 @@ public class DrillRating implements Parcelable {
      * @param key
      * @param rating
      */
-    public void putRating(final String key, final int rating) {
+    public void putRating(final String key, final float rating) {
         putRating(new Rating(key, rating));
     }
 

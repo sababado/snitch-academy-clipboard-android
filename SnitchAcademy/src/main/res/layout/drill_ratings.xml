@@ -15,7 +15,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/first_run"
         android:tag="1"
-        android:stepSize="1"
+        android:stepSize=".5"
         android:rating="1"/>
 
     <RatingBar
@@ -23,7 +23,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/second_run"
         android:tag="2"
-        android:stepSize="1"
+        android:stepSize=".5"
         android:rating="1" />
 
     <RatingBar
@@ -31,7 +31,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/third_run"
         android:tag="3"
-        android:stepSize="1"
+        android:stepSize=".5"
         android:rating="1" />
 
 </LinearLayout>
